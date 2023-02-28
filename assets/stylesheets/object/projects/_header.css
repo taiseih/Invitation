@@ -1,0 +1,84 @@
+/* 共通スタイルは外に書く */
+  .p-header{
+    font-family: Libre Baskerville,"Noto Serif JP",游明朝,YuMincho,ヒラギノ明朝 ProN W3,Hiragino Mincho ProN,HG明朝E,ＭＳ Ｐ明朝,ＭＳ 明朝,serif;
+    width: 100%;
+  }
+  .p-header__content{
+    position: relative;
+    width: 100%;
+  }
+  .head-img {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: change-img-anim 15s infinite;
+  }
+
+  .head-img:nth-of-type(1) {
+    animation: change-img-anim-first 15s infinite;
+    animation-delay: 0s;
+  }
+  .head-img:nth-of-type(2) {
+    animation-delay: 5s;
+  }
+  .head-img:nth-of-type(3) {
+    animation-delay: 10s;
+  }
+  @keyframes change-img-anim-first {
+    0%{ opacity: 1;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+  @keyframes change-img-anim {
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+
+  .p-header__title{
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 960px) { /* pc用スタイル */
+    .p-header__content{
+      height: 800px;
+    }
+    .head-img {
+      height: 800px;
+    }
+    .p-header__title{
+      font-size: 100px;
+    }
+  }
+
+  @media screen and (max-width: 959px) { /* tb用スタイル */
+    .p-header__content{
+      height: 500px;
+    }
+    .head-img {
+      height: 500px;
+    }
+    .p-header__title{
+      font-size: 80px;
+    }
+  }
+  @media screen and (max-width: 795px) { /* sp用スタイル */
+    .p-header__content{
+      height: 450px;
+    }
+    .head-img {
+      height: 450px;
+    }
+    .p-header__title{
+      font-size: 70px;
+    }
+  }

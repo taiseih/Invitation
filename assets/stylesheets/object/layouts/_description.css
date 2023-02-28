@@ -1,0 +1,7 @@
+/* 共通スタイルは外に書く */
+
+
+@media screen and (max-width: 959px) { /* tb用スタイル */
+}
+@media screen and (max-width: 795px) { /* sp用スタイル */
+}

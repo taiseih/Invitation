@@ -1,0 +1,242 @@
+/* 共通スタイルは外に書く */
+#p-reserve {
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+}
+
+.p-reserve__title {
+  font-size: 50px;
+  color: #2e6b91;
+  letter-spacing: 0.12em;
+}
+
+.p-reserve__text {
+  font-size: 16px;
+  text-align: center;
+  line-height: 2.5;
+}
+
+.reserve-text-span {
+  line-height: 5;
+}
+
+.p-reserve__form {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+
+/* セレクトボタン */
+.p-reserve__select {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.p-reserve__select--btn {
+  display: none;
+}
+
+.p-reserve__attend {
+  font-size: 20px;
+  display: inline-block;
+  border: solid;
+  width: 100px;
+  height: 50px;
+  color: black;
+  padding-top: 15px;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.p-reserve__decline {
+  font-size: 20px;
+  display: inline-block;
+  border: solid;
+  width: 100px;
+  height: 50px;
+  color: black;
+  padding-top: 15px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.reserve__label-active {
+  background-color: #2e6b91;
+  color: white
+}
+
+/* endセレクト */
+
+.p-reserve__wrapp {
+  margin: 7rem auto;
+  width: 80%;
+  display: block;
+}
+
+.p-reserve__content {
+  display: flex;
+  padding: 10px 0;
+  height: 50px;
+}
+
+.p-reserve__content--label {
+  font-size: 20px;
+  width: 30%;
+  align-items: center;
+  display: block;
+  text-align: left;
+}
+
+.p-reserve__content--wrapp {
+  width: 72%;
+  display: flex;
+  caret-color: auto;
+}
+
+.p-reserve__attention {
+  color: red;
+  text-align: left;
+}
+
+.p-reserve__content--title {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.p-reserve__content--inputhalf {
+  width: 70%;
+  background-color: #EEEEEE;
+  border: none;
+  margin-right: 10px;
+  font-size: 100%;
+}
+
+.p-reserve__content--inputhalf:nth-child(2) {
+  margin: 0%;
+}
+
+.p-reserve__content--input {
+  width: 70%;
+  background-color: #EEEEEE;
+  border: none;
+  padding: 0 10px;
+  font-size: 100%;
+}
+
+.p-reserve__content--textarea {
+  background-color: #EEEEEE;
+  border: none;
+}
+
+.p-reserve__content--error {
+  display: none;
+}
+
+.p-reserve__delete {
+  display: block;
+  text-align: right;
+
+}
+
+.p-reserve__delete button {
+  font-size: 15px;
+  border: none;
+  width: 100px;
+  height: 50px;
+  background-color: #FADBDA;
+  border-radius: 100px;
+  color: #ff0000;
+}
+
+.p-reserve__delete button:hover {
+  background-color: #fdbcba;
+}
+
+.p-reserve__add {
+  margin-top: 50px;
+}
+
+.p-reserve__add button {
+  font-size: 15px;
+  border: none;
+  width: 300px;
+  height: 50px;
+  background-color: aliceblue;
+  border-radius: 100px;
+  color: #4682B4;
+}
+
+.p-reserve__add button:hover {
+  background-color: #b8dfff;
+}
+
+.p-reserve__confirm--btn {
+  display: inline-block;
+  border: solid;
+  width: 500px;
+  height: 50px;
+  background-color: #fff;
+  color: black;
+  margin-top: 25px;
+}
+
+.p-reserve__confirm--btn:hover {
+  background-color: #4682B4;
+  color: white;
+}
+
+@media screen and (min-width: 960px) {
+  /* pc用スタイル */
+}
+
+@media screen and (max-width: 959px) {
+
+  /* tb用スタイル */
+  .p-reserve__attend {
+    font-size: 25px;
+    border-radius: 100px;
+    width: 130px;
+    height: 120px;
+  }
+
+  .p-reserve__decline {
+    font-size: 25px;
+    border-radius: 100px;
+    width: 130px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 795px) {
+
+  /* sp用スタイル */
+  .p-reserve__attend {
+    font-size: 25px;
+    border-radius: 100px;
+    width: 100px;
+    height: 90px;
+  }
+
+  .p-reserve__decline {
+    font-size: 25px;
+    border-radius: 100px;
+    width: 100px;
+    height: 90px;
+  }
+
+  .p-reserve__attendance {
+    font-size: 15px;
+  }
+
+  .p-reserve__content--title {
+    font-size: medium;
+  }
+
+  .p-reserve__content--read {
+    font-size: smaller;
+  }
+}

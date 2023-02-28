@@ -1,0 +1,16 @@
+/* 共通スタイルは外に書く */
+  .l-reserve{
+    background-color: #e6f1f7;
+    padding: 150px 150px 50px;
+    font-family: Libre Baskerville,"Noto Serif JP",游明朝,YuMincho,ヒラギノ明朝 ProN W3,Hiragino Mincho ProN,HG明朝E,ＭＳ Ｐ明朝,ＭＳ 明朝,serif;
+    color: #333;
+  }
+  @media screen and (min-width: 960px) { /* pc用スタイル */
+  }
+  @media screen and (max-width: 959px) { /* tb用スタイル */
+  }
+  @media screen and (max-width: 795px) { /* sp用スタイル */
+    .l-reserve{
+      padding: 30px 30px 10px;
+    }
+  }

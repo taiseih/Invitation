@@ -1,0 +1,51 @@
+/* 共通スタイルは外に書く */
+  .p-description{
+    border: 4px solid;
+    border-color: white;
+    margin: 50px;
+  }
+  .p-description__detail{
+    font-size: 23px;
+  }
+  .p-description__detail a{
+    cursor: pointer;
+    color: #333;
+  }
+  @media screen and (min-width: 960px) { /* pc用スタイル */
+    .p-description{
+      display: flex;
+      border: 4px solid;
+      border-color: white;
+      margin: 50px;
+    }
+    .p-description__detail{
+      padding: 120px 5% 120px 10%;
+      font-size: 23px;
+    }
+    
+  }
+  @media screen and (max-width: 959px) { /* tb用スタイル */
+    .p-description{
+      border: 4px solid;
+      border-color: white;
+      margin: 50px;
+      
+    }
+    .p-description__detail{
+      padding: 120px 5%;
+      font-size: 23px;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 795px) { /* sp用スタイル */
+    .p-description{
+      border: 4px solid;
+      border-color: white;
+      margin: 50px;
+    }
+    .p-description__detail{
+      padding: 120px 5%;
+      font-size: 23px;
+      text-align: center;
+    }
+  }

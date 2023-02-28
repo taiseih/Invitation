@@ -1,0 +1,13 @@
+/* 共通スタイルは外に書く */
+  .l-countdown{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+  @media screen and (min-width: 960px) { /* pc用スタイル */
+  }
+  @media screen and (max-width: 959px) { /* tb用スタイル */
+  }
+  @media screen and (max-width: 795px) { /* sp用スタイル */
+  }
