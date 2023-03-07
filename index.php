@@ -169,7 +169,7 @@ echo $_SESSION['password'];
                         <p class="p-reserve__content--title">名前</p>
                       </div>
                       <div class="p-reserve__content--wrapp">
-                        <input type="text" class="p-reserve__content--inputhalf" name="first_name" placeholder="性"  />
+                        <input type="text" class="p-reserve__content--inputhalf" name="first_name" placeholder="性" />
                         <input type="text" class="p-reserve__content--inputhalf" name="second_name" placeholder="名" required="" />
                       </div>
                     </div>
@@ -234,12 +234,11 @@ echo $_SESSION['password'];
   <!--end formエリア -->
 
   <!-- テンプレート -->
-  <div id="form">
+
     <template id="form-template">
       <!-- 追加フォーム -->
       <div class="form" id="add_form_0">
         <div class="p-reserve__select">
-
           <div class="p-reserve__wrapp">
             <p class="p-reserve__attention">お連れ様の情報を入力して下さい</p>
             <div class="p-reserve__wrapp">
@@ -249,8 +248,8 @@ echo $_SESSION['password'];
                     <p class="p-reserve__content--title">名前</p>
                   </div>
                   <div class="p-reserve__content--wrapp">
-                    <input name="first_name" type="text" class="p-reserve__content--inputhalf" placeholder="性" required="" />
-                    <input name="second_name" type="text" class="p-reserve__content--inputhalf" placeholder="名" required="" />
+                    <input name="add_first_name_" type="text" class="p-reserve__content--inputhalf" placeholder="性" required="" />
+                    <input name="add_second_name_" type="text" class="p-reserve__content--inputhalf" placeholder="名" required="" />
                   </div>
                 </div>
                 <div class="p-reserve__content">
@@ -258,33 +257,33 @@ echo $_SESSION['password'];
                     <p class="p-reserve__content--title">読み方</p>
                   </div>
                   <div class="p-reserve__content--wrapp">
-                    <input name="first_read" type="text" class="p-reserve__content--inputhalf" placeholder="せい" required="" />
-                    <input name="second_read" type="text" class="p-reserve__content--inputhalf" placeholder="めい" required="" />
+                    <input name="add_first_read" type="text" class="p-reserve__content--inputhalf" placeholder="せい" required="" />
+                    <input name="add_second_read" type="text" class="p-reserve__content--inputhalf" placeholder="めい" required="" />
                   </div>
                 </div>
                 <div class="p-reserve__content">
                   <div class="p-reserve__content--label">
                     <p class="p-reserve__content--title">電話番号</p>
                   </div>
-                  <input name="phone_number" type="" class="p-reserve__content--input" required="" />
+                  <input name="add_phone_number" type="" class="p-reserve__content--input" required="" />
                 </div>
                 <div class="p-reserve__content">
                   <div class="p-reserve__content--label">
                     <p class="p-reserve__content--title">メールアドレス</p>
                   </div>
-                  <input name="email" type="email" class="p-reserve__content--input" />
+                  <input name="add_email" type="email" class="p-reserve__content--input" />
                 </div>
                 <div class="p-reserve__content">
                   <div class="p-reserve__content--label">
                     <p class="p-reserve__content--title">職業</p>
                   </div>
-                  <input name="occupation" type="text" class="p-reserve__content--input" />
+                  <input name="add_occupation" type="text" class="p-reserve__content--input" />
                 </div>
                 <div class="p-reserve__content">
                   <div class="p-reserve__content--label">
                     <p class="p-reserve__content--title">年収</p>
                   </div>
-                  <input name="income" type="number" class="p-reserve__content--input" />
+                  <input name="add_income" type="number" class="p-reserve__content--input" />
                 </div>
               </div>
             </div>
@@ -296,7 +295,7 @@ echo $_SESSION['password'];
         </div>
       </div>
     </template>
-  </div>
+
   <!-- エンドテンプレート -->
   <script src="./assets/script/rsvp.js"></script>
 </body>
