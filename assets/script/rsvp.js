@@ -66,7 +66,7 @@ function actionClone() {
   count++;
   const template = document.getElementById("form-template");
   const new_form = template.content.cloneNode(true);
-  const parent = document.getElementById("test");
+  const parent = document.getElementById("form-area");
   parent.appendChild(new_form);
   if (count === 3) {
     const reserve = document.getElementById("add");
@@ -81,10 +81,26 @@ function actionClone() {
 
   }
   //name属性に数字追加のメソッド
-  var nameInput = document.getElementsByName("add_first_name_")[0];
+  var firstName = document.getElementsByName("add_first_name_")[0];
+  var secondName = document.getElementsByName("add_second_name_")[0];
+  var firstReadName = document.getElementsByName("add_first_read_")[0];
+  var secondReadName = document.getElementsByName("add_second_read_")[0];
+  var phoneNumber = document.getElementsByName("add_phone_number_")[0];
+  var email = document.getElementsByName("add_email_")[0];
+  var occupation = document.getElementsByName("add_occupation_")[0];
+  var income = document.getElementsByName("add_income_")[0];
   var countName = count;
   var strCount = countName.toString();
-  nameInput.name = nameInput.name + strCount;
+  firstName.name = firstName.name + strCount;
+  secondName.name = secondName.name + strCount;
+  firstReadName.name = firstReadName.name + strCount;
+  secondReadName.name = secondReadName.name + strCount;
+  phoneNumber.name = phoneNumber.name + strCount;
+  email.name =email.name + strCount;
+  occupation.name = occupation.name + strCount;
+  income.name = income.name + strCount;
+
+
 }
 
 
@@ -92,7 +108,7 @@ function actionClone() {
 
 function actionDelete() {
   if (count > 0) {
-    const parent = document.getElementById("test");
+    const parent = document.getElementById("form-area");
     const lastForm = parent.lastElementChild;
     parent.removeChild(lastForm);
     count--;

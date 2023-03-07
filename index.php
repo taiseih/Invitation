@@ -147,7 +147,7 @@ echo $_SESSION['password'];
             <!-- formエリア -->
 
 
-            <div id="test">
+            <div id="form-area">
               <div class="form" id="add_form_0">
                 <div class="p-reserve__select">
 
@@ -234,67 +234,64 @@ echo $_SESSION['password'];
   <!--end formエリア -->
 
   <!-- テンプレート -->
-
-    <template id="form-template">
-      <!-- 追加フォーム -->
-      <div class="form" id="add_form_0">
-        <div class="p-reserve__select">
+  <template id="form-template">
+    <div class="form" id="add_form_0">
+      <div class="p-reserve__select">
+        <div class="p-reserve__wrapp">
+          <p class="p-reserve__attention">お連れ様の情報を入力して下さい</p>
           <div class="p-reserve__wrapp">
-            <p class="p-reserve__attention">お連れ様の情報を入力して下さい</p>
-            <div class="p-reserve__wrapp">
-              <div class="p-reserve__box">
-                <div class="p-reserve__content">
-                  <div class="p-reserve__content--label">
-                    <p class="p-reserve__content--title">名前</p>
-                  </div>
-                  <div class="p-reserve__content--wrapp">
-                    <input name="add_first_name_" type="text" class="p-reserve__content--inputhalf" placeholder="性" required="" />
-                    <input name="add_second_name_" type="text" class="p-reserve__content--inputhalf" placeholder="名" required="" />
-                  </div>
+            <div class="p-reserve__box">
+              <div class="p-reserve__content">
+                <div class="p-reserve__content--label">
+                  <p class="p-reserve__content--title">名前</p>
                 </div>
-                <div class="p-reserve__content">
-                  <div class="p-reserve__content--label">
-                    <p class="p-reserve__content--title">読み方</p>
-                  </div>
-                  <div class="p-reserve__content--wrapp">
-                    <input name="add_first_read" type="text" class="p-reserve__content--inputhalf" placeholder="せい" required="" />
-                    <input name="add_second_read" type="text" class="p-reserve__content--inputhalf" placeholder="めい" required="" />
-                  </div>
-                </div>
-                <div class="p-reserve__content">
-                  <div class="p-reserve__content--label">
-                    <p class="p-reserve__content--title">電話番号</p>
-                  </div>
-                  <input name="add_phone_number" type="" class="p-reserve__content--input" required="" />
-                </div>
-                <div class="p-reserve__content">
-                  <div class="p-reserve__content--label">
-                    <p class="p-reserve__content--title">メールアドレス</p>
-                  </div>
-                  <input name="add_email" type="email" class="p-reserve__content--input" />
-                </div>
-                <div class="p-reserve__content">
-                  <div class="p-reserve__content--label">
-                    <p class="p-reserve__content--title">職業</p>
-                  </div>
-                  <input name="add_occupation" type="text" class="p-reserve__content--input" />
-                </div>
-                <div class="p-reserve__content">
-                  <div class="p-reserve__content--label">
-                    <p class="p-reserve__content--title">年収</p>
-                  </div>
-                  <input name="add_income" type="number" class="p-reserve__content--input" />
+                <div class="p-reserve__content--wrapp">
+                  <input name="add_first_name_" type="text" class="p-reserve__content--inputhalf" placeholder="性" required="" />
+                  <input name="add_second_name_" type="text" class="p-reserve__content--inputhalf" placeholder="名" required="" />
                 </div>
               </div>
+              <div class="p-reserve__content">
+                <div class="p-reserve__content--label">
+                  <p class="p-reserve__content--title">読み方</p>
+                </div>
+                <div class="p-reserve__content--wrapp">
+                  <input name="add_first_read_" type="text" class="p-reserve__content--inputhalf" placeholder="せい" required="" />
+                  <input name="add_second_read_" type="text" class="p-reserve__content--inputhalf" placeholder="めい" required="" />
+                </div>
+              </div>
+              <div class="p-reserve__content">
+                <div class="p-reserve__content--label">
+                  <p class="p-reserve__content--title">電話番号</p>
+                </div>
+                <input name="add_phone_number_" type="" class="p-reserve__content--input" required="" />
+              </div>
+              <div class="p-reserve__content">
+                <div class="p-reserve__content--label">
+                  <p class="p-reserve__content--title">メールアドレス</p>
+                </div>
+                <input name="add_email_" type="email" class="p-reserve__content--input" />
+              </div>
+              <div class="p-reserve__content">
+                <div class="p-reserve__content--label">
+                  <p class="p-reserve__content--title">職業</p>
+                </div>
+                <input name="add_occupation_" type="text" class="p-reserve__content--input" />
+              </div>
+              <div class="p-reserve__content">
+                <div class="p-reserve__content--label">
+                  <p class="p-reserve__content--title">年収</p>
+                </div>
+                <input name="add_income_" type="number" class="p-reserve__content--input" />
+              </div>
             </div>
-            <!-- 削除 -->
-            <div class="p-reserve__delete">
-              <td><button class="deleteBtn" id="delete" type="button" onclick="actionDelete()">&#10005; 削除する</button></td>
-            </div>
+          </div>
+          <div class="p-reserve__delete">
+            <td><button class="deleteBtn" id="delete" type="button" onclick="actionDelete()">&#10005; 削除する</button></td>
           </div>
         </div>
       </div>
-    </template>
+    </div>
+  </template>
 
   <!-- エンドテンプレート -->
   <script src="./assets/script/rsvp.js"></script>
