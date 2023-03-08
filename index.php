@@ -1,6 +1,7 @@
 <?php
 // セッションを開始する
 session_start();
+$data = $_POST;
 echo $_SESSION['password'];
 // ログインしていない場合は、ログインページにリダイレクトする
 // if($_SESSION['password']){
@@ -12,7 +13,52 @@ echo $_SESSION['password'];
 //   header("Location: login.php");
 // }
 
+function h($str)
+{
+  return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+}
 
+
+$_SESSION['attendance'] = $data['attendance'];
+$_SESSION['first_name'] = h($data['first_name']);
+$_SESSION['second_name'] = h($data['second_name']);
+$_SESSION['first_read'] = h($data['first_read']);
+$_SESSION['second_read'] = h($data['second_read']);
+$_SESSION['phone_number'] = h($data['phone_number']);
+$_SESSION['email'] = h($data['email']);
+$_SESSION['occupation'] = h($data['occupation']);
+$_SESSION['income'] = h($data['income']);
+
+$_SESSION['add_first_name_1'] = h($data['add_first_name_1']);
+$_SESSION['add_second_name_1'] = h($data['add_second_name_1']);
+$_SESSION['add_first_read_1'] = h($data['add_first_read_1']);
+$_SESSION['add_second_read_1'] = h($data['add_second_read_1']);
+$_SESSION['add_phone_number_1'] = h($data['add_phone_number_1']);
+$_SESSION['add_email_1'] = h($data['add_email_1']);
+$_SESSION['add_occupation_1'] = h($data['add_occupation_1']);
+$_SESSION['add_income_1'] = h($data['add_income_1']);
+
+$_SESSION['add_first_name_2'] = h($data['add_first_name_2']);
+$_SESSION['add_second_name_2'] = h($data['add_second_name_2']);
+$_SESSION['add_first_read_2'] = h($data['add_first_read_2']);
+$_SESSION['add_second_read_2'] = h($data['add_second_read_2']);
+$_SESSION['add_phone_number_2'] = h($data['add_phone_number_2']);
+$_SESSION['add_email_2'] = h($data['add_email_2']);
+$_SESSION['add_occupation_2'] = h($data['add_occupation_2']);
+$_SESSION['add_income_2'] = h($data['add_income_2']);
+
+$_SESSION['add_first_name_3'] = h($data['add_first_name_3']);
+$_SESSION['add_second_name_3'] = h($data['add_second_name_3']);
+$_SESSION['add_first_read_3'] = h($data['add_first_read_3']);
+$_SESSION['add_second_read_3'] = h($data['add_second_read_3']);
+$_SESSION['add_phone_number_3'] = h($data['add_phone_number_3']);
+$_SESSION['add_email_3'] = h($data['add_email_3']);
+$_SESSION['add_occupation_3'] = h($data['add_occupation_3']);
+$_SESSION['add_income_3'] = h($data['add_income_3']);
+
+if($_SESSION['attendance']){
+  header('Location:complete.php');
+}
 
 ?>
 
@@ -143,7 +189,7 @@ echo $_SESSION['password'];
           <br><span class="reserve-text-span">どうぞお気軽にお問い合わせ下さいませ。</span>
         </p>
         <div id="form">
-          <form action="complete.php" method="POST" class="p-reserve__form">
+          <form action="index.php" method="POST" class="p-reserve__form">
             <!-- formエリア -->
 
 
@@ -153,12 +199,12 @@ echo $_SESSION['password'];
 
                   <label id="reserve__label01" class="p-reserve__attend" for="attendance activeOn">
                     <span>出席</span>
-                    <input class="p-reserve__select--btn" type="radio" name="attendance" value="出席" id="attendance activeOn" onclick="actionToggle01();actionIf01()">
+                    <input required class="p-reserve__select--btn" type="radio" name="attendance" value="出席" id="attendance activeOn" onclick="actionToggle01();actionIf01()">
                   </label>
 
                   <label id="reserve__label02" class="p-reserve__decline" for="attendance activeOff">
                     <span>欠席</span>
-                    <input class="p-reserve__select--btn" type="radio" name="attendance" value="欠席" id="attendance activeOff" onclick="actionToggle02();actionIf02()">
+                    <input required class="p-reserve__select--btn" type="radio" name="attendance" value="欠席" id="attendance activeOff" onclick="actionToggle02();actionIf02()">
                   </label>
                 </div>
 

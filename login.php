@@ -3,10 +3,10 @@
 $password = "password123";
 
 // フォームが送信された場合
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {//post通信かどうかの比較
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { //post通信かどうかの比較
     $user_password = $_POST['password'];
 
-    if ($user_password === $password) {//あらかじめ決めたパスワードと比較
+    if ($user_password === $password) { //あらかじめ決めたパスワードと比較
         session_start();
         $_SESSION['password'] = $password;
         header("Location: index.php");
@@ -18,11 +18,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {//post通信かどうかの比較
 ?>
 
 <!-- ログインフォームを表示する -->
-<form method="post">
-    <label for="password">パスワード:</label>
-    <input type="password" id="password" name="password">
-    <button type="submit">ログイン</button>
-</form>
+
+
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./assets/stylesheets/object/projects/login.css" />
+
+</head>
+
+<body>
+    <div id="login">
+        <form name='form-login'>
+            <span class="fontawesome-lock"></span>
+            <input type="password" id"pass" placeholder="Password">
+
+            <button type="submit">ログイン</button>
+
+        </form>
+    </div>
+</body>
+
 
 <?php
 // エラーメッセージがある場合には表示する

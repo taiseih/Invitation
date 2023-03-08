@@ -1,52 +1,54 @@
 <?php
 session_start();
-$data = $_POST;
+if(!$_SESSION['attendance']){
+    header('Location:index.php');
+}
 
-var_dump($data);
-$attendance = $data['attendance'];
-$firstName = $data['first_name'];
-$secondName = $data['second_name'];
+var_dump($_SESSION);
+$attendance = $_SESSION['attendance'];
+$firstName = $_SESSION['first_name'];
+$secondName = $_SESSION['second_name'];
 $name = $firstName . $secondName;
-$firstRead = $data['first_read'];
-$secondRead = $data['second_read'];
+$firstRead = $_SESSION['first_read'];
+$secondRead = $_SESSION['second_read'];
 $read = $firstRead . $secondRead; //名前を変数にまとめる
-$phoneNumber = $data['phone_number'];
-$email = $data['email'];
-$occupation = $data['occupation'];
-$income = $data['income'];
+$phoneNumber = $_SESSION['phone_number'];
+$email = $_SESSION['email'];
+$occupation = $_SESSION['occupation'];
+$income = $_SESSION['income'];
 
-$firstName_1 = $data['add_first_name_1'];
-$secondName_1 = $data['add_second_name_1'];
+$firstName_1 = $_SESSION['add_first_name_1'];
+$secondName_1 = $_SESSION['add_second_name_1'];
 $name_1 = $firstName_1 . $secondName_1;
-$firstRead_1 = $data['add_first_read_1'];
-$secondRead_1 = $data['second_read'];
+$firstRead_1 = $_SESSION['add_first_read_1'];
+$secondRead_1 = $_SESSION['second_read'];
 $read_1 = $firstRead_1 . $secondRead_1; //名前を変数にまとめる
-$phoneNumber_1 = $data['add_phone_number_1'];
-$email_1 = $data['add_email_1'];
-$occupation_1 = $data['add_occupation_1'];
-$income_1 = $data['add_income_1'];
+$phoneNumber_1 = $_SESSION['add_phone_number_1'];
+$email_1 = $_SESSION['add_email_1'];
+$occupation_1 = $_SESSION['add_occupation_1'];
+$income_1 = $_SESSION['add_income_1'];
 
-$firstName_2 = $data['add_first_name_2'];
-$secondName_2 = $data['add_second_name_2'];
+$firstName_2 = $_SESSION['add_first_name_2'];
+$secondName_2 = $_SESSION['add_second_name_2'];
 $name_2 = $firstName_2 . $secondName_2;
-$firstRead_2 = $data['add_first_read_2'];
-$secondRead_2 = $data['add_second_read_2'];
+$firstRead_2 = $_SESSION['add_first_read_2'];
+$secondRead_2 = $_SESSION['add_second_read_2'];
 $read_2 = $firstRead_2 . $secondRead_2; //名前を変数にまとめる
-$phoneNumber_2 = $data['add_phone_number_2'];
-$email_2 = $data['add_email_2'];
-$occupation_2 = $data['add_occupation_2'];
-$income_2 = $data['add_income_2'];
+$phoneNumber_2 = $_SESSION['add_phone_number_2'];
+$email_2 = $_SESSION['add_email_2'];
+$occupation_2 = $_SESSION['add_occupation_2'];
+$income_2 = $_SESSION['add_income_2'];
 
-$firstName_3 = $data['add_first_name_3'];
-$secondName_3 = $data['add_second_name_3'];
+$firstName_3 = $_SESSION['add_first_name_3'];
+$secondName_3 = $_SESSION['add_second_name_3'];
 $name_3 = $firstName_3 . $secondName_3;
-$firstRead_3 = $data['add_first_read_3'];
-$secondRead_3 = $data['add_second_read_3'];
+$firstRead_3 = $_SESSION['add_first_read_3'];
+$secondRead_3 = $_SESSION['add_second_read_3'];
 $read_3 = $firstRead_3 . $secondRead_3; //名前を変数にまとめる
-$phoneNumber_3 = $data['add_phone_number_3'];
-$email_3 = $data['add_email_3'];
-$occupation_3 = $data['add_occupation_3'];
-$income_3 = $data['add_income_3'];
+$phoneNumber_3 = $_SESSION['add_phone_number_3'];
+$email_3 = $_SESSION['add_email_3'];
+$occupation_3 = $_SESSION['add_occupation_3'];
+$income_3 = $_SESSION['add_income_3'];
 
 // アドミンに送るメール内容
 //     $toAdmin = "kakatx617@gmail.com";
