@@ -4,14 +4,16 @@ session_start();
 $data = $_POST;
 echo $_SESSION['password'];
 // ログインしていない場合は、ログインページにリダイレクトする
-// if($_SESSION['password']){
-//   if (!$_SESSION['password'] === 'password123') {
-//     header("Location: login.php");
-//     exit();
-//   }
-// }else{
-//   header("Location: login.php");
-// }
+if ($_SESSION['password']) {
+  if (!$_SESSION['password'] === 'password123') {
+    header("Location: login.php");
+    exit();
+  }
+} else {
+  header("Location: login.php");
+}
+
+
 
 function h($str)
 {
@@ -56,7 +58,7 @@ $_SESSION['add_email_3'] = h($data['add_email_3']);
 $_SESSION['add_occupation_3'] = h($data['add_occupation_3']);
 $_SESSION['add_income_3'] = h($data['add_income_3']);
 
-if($_SESSION['attendance']){
+if ($_SESSION['attendance']) {
   header('Location:complete.php');
 }
 
@@ -156,7 +158,7 @@ if($_SESSION['attendance']){
       <div id="p-countdown">
         <h2 class="p-countdown__title">COUNTDOWN</h2>
 
-        <p class="p-countdown__date">to 2023.4.1 00:00</p>
+        <p class="p-countdown__date">to 2023.9.1 00:00</p>
         <ul class="p-countdown__wrap">
           <li class="p-countdown__days">
             <p class="p-number" id="p-days"></p>

@@ -77,17 +77,3 @@ after {
     height: 50px;
 }
 
-#login form input[type="submit"] {
-    background: #b5cd60;
-    border: 0;
-    width: 100%;
-    height: 40px;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-#login form input[type="submit"]:hover {
-    background: #16aa56;
-}

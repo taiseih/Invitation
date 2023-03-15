@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //post通信かどうかの比較
 
 <body>
     <div id="login">
-        <form name='form-login'>
+        <form name='form-login' method="post">
             <span class="fontawesome-lock"></span>
-            <input type="password" id"pass" placeholder="Password">
+            <input type="password" name="password" id="pass" placeholder="Password">
 
             <button type="submit">ログイン</button>
 

@@ -34,29 +34,29 @@ function actionIf02() {
 
 // カウントダウン
 let countdown = setInterval(function () {
-  const now = new Date()  //今の日時
-  const target = new Date("2023/4/1 00:00:00") //予定日を取得
-  const remainTime = target - now  //差分を取る（ミリ秒で返ってくる
-
+  const now = new Date();  //今の日時
+  const target = new Date("2023/9/1 00:00:00"); //予定日を取得
+  const remainTime = target - now;  //差分を取る（ミリ秒で返ってくる
+console.log(target);
   //指定の日時を過ぎていたら処理をしない
-  if (remainTime < 0) return false
+  if (remainTime < 0) return false;
 
   //差分の日・時・分・秒を取得
-  const difDay = Math.floor(remainTime / 1000 / 60 / 60 / 24)
-  const difHour = Math.floor(remainTime / 1000 / 60 / 60) % 24
-  const difMin = Math.floor(remainTime / 1000 / 60) % 60
-  const difSec = Math.floor(remainTime / 1000) % 60
+  const difDay = Math.floor(remainTime / 1000 / 60 / 60 / 24);
+  const difHour = Math.floor(remainTime / 1000 / 60 / 60) % 24;
+  const difMin = Math.floor(remainTime / 1000 / 60) % 60;
+  const difSec = Math.floor(remainTime / 1000) % 60;
 
   //残りの日時を上書き
-  document.getElementById("p-days").textContent = difDay
-  document.getElementById("p-hours").textContent = difHour
-  document.getElementById("minutes").textContent = difMin
-  document.getElementById("seconds").textContent = difSec
+  document.getElementById("p-days").textContent = difDay;
+  document.getElementById("p-hours").textContent = difHour;
+  document.getElementById("minutes").textContent = difMin;
+  document.getElementById("seconds").textContent = difSec;
 
   //指定の日時になればカウントを止める
-  if (remainTime < 0) clearInterval(countdown)
+  if (remainTime < 0) clearInterval(countdown);
 
-}, 1000)
+}, 1000);
 
 
 
