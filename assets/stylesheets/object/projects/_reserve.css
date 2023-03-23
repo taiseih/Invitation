@@ -196,37 +196,14 @@
 @media screen and (max-width: 959px) {
 
   /* tb用スタイル */
-  .p-reserve__attend {
-    font-size: 25px;
-    border-radius: 100px;
-    width: 130px;
-    height: 120px;
-  }
-
-  .p-reserve__decline {
-    font-size: 25px;
-    border-radius: 100px;
-    width: 130px;
-    height: 120px;
+  .p-reserve__confirm--btn {
+    width: 400px;
   }
 }
 
 @media screen and (max-width: 795px) {
 
   /* sp用スタイル */
-  .p-reserve__attend {
-    font-size: 25px;
-    border-radius: 100px;
-    width: 100px;
-    height: 90px;
-  }
-
-  .p-reserve__decline {
-    font-size: 25px;
-    border-radius: 100px;
-    width: 100px;
-    height: 90px;
-  }
 
   .p-reserve__attendance {
     font-size: 15px;
@@ -239,4 +216,29 @@
   .p-reserve__content--read {
     font-size: smaller;
   }
+
+  .p-reserve__confirm--btn {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+
+  .p-reserve__title {
+      font-size: 40px;
+      color: #2e6b91;
+      letter-spacing: 0.12em;
+    }
+    .p-reserve__text{
+      font-size: 14px;
+    }
+    .p-reserve__content--title{
+      font-size: 12px;
+    }
+  .p-reserve__add button{
+      width: 200px;
+    }
+  .p-reserve__confirm--btn {
+      width: 200px;
+    }
 }

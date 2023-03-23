@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['attendance']){
+if (!$_SESSION['attendance']) {
     header('Location:index.php');
 }
 
@@ -51,58 +51,171 @@ $occupation_3 = $_SESSION['add_occupation_3'];
 $income_3 = $_SESSION['add_income_3'];
 
 // アドミンに送るメール内容
-//     $toAdmin = "kakatx617@gmail.com";
-//     $mailTitleByAdmin = "{$name}様からのお問合せ";
-//     $mailContentsByAdmin = <<< EOD
-//         ■出欠
-//         {$attendance}
-//         ■ 名前
-//         {$name}
-//         ■ 読み方
-//         {$read}
-//         ■ 電話番号
-//         {$phoneNumber}
-//         ■ メールアドレス
-//         {$email}
-//         ■ 職業
-//         {$occupation}
-//         ■ 年収
-//         {$income}
-//     EOD;
-//     $fromUser = "From:".$email;
-// // endアドミンに送るメール内容
-//     $headers = array(
-//         'MIME-Version: 1.0',
-//         'Content-type: text/plain; charset=UTF-8',
-//         $fromUser,
-//         'Reply-To: ' . $email,
-//     );
-// // // 言語の指定
-// mb_language("Japanese");
-// mb_internal_encoding("UTF-8");
-//     // // end言語の指定
+$toAdmin = "taisei.hayashizaki@gmail.com";
+$mailTitleByAdmin = "{$name}様からのお問合せ";
+if (!$name_1) { //お連れ様なし
+    $mailContentsByAdmin = <<< EOD
+        ■出欠
+        {$attendance}
+        ■ 名前
+        {$name}
+        ■ 読み方
+        {$read}
+        ■ 電話番号
+        {$phoneNumber}
+        ■ メールアドレス
+        {$email}
+        ■ 職業
+        {$occupation}
+        ■ 年収
+        {$income}
+    EOD;
+} elseif ($name_1) { //お連れ様が1人の時
+    $mailContentsByAdmin = <<< EOD
+        ■出欠
+        {$attendance}
+        ■ 代表者名
+        {$name}
+        ■ 読み方
+        {$read}
+        ■ 電話番号
+        {$phoneNumber}
+        ■ メールアドレス
+        {$email}
+        ■ 職業
+        {$occupation}
+        ■ 年収
+        {$income}
+        ■お連れ様情報
+
+        ■ お連れ様 名前
+        {$name_1}
+        ■ お連れ様 読み方
+        {$read_1}
+        ■ お連れ様 電話番号
+        {$phoneNumber_1}
+        ■ お連れ様 メールアドレス
+        {$email_1}
+        ■ お連れ様 職業
+        {$occupation_1}
+        ■ お連れ様 年収
+        {$income_1}
+    EOD;
+} elseif ($name_2) { //お連れ様が2人の時
+    $mailContentsByAdmin = <<< EOD
+        ■出欠
+        {$attendance}
+        ■ 代表者名
+        {$name}
+        ■ 読み方
+        {$read}
+        ■ 電話番号
+        {$phoneNumber}
+        ■ メールアドレス
+        {$email}
+        ■ 職業
+        {$occupation}
+        ■ 年収
+        {$income}
+        ■お連れ様情報
+
+        ■ お連れ様 名前
+        {$name_1}
+        {$name_2}
+        ■ お連れ様 読み方
+        {$read_1}
+        {$read_2}
+        ■ お連れ様 電話番号
+        {$phoneNumber_1}
+        {$phoneNumber_2}
+        ■ お連れ様 メールアドレス
+        {$email_1}
+        {$email_2}
+        ■ お連れ様 職業
+        {$occupation_1}
+        {$occupation_2}
+        ■ お連れ様 年収
+        {$income_1}
+        {$income_2}
+    EOD;
+}
+elseif($name_3){ //お連れ様が3人の時
+    $mailContentsByAdmin = <<< EOD
+        ■出欠
+        {$attendance}
+        ■ 代表者名
+        {$name}
+        ■ 読み方
+        {$read}
+        ■ 電話番号
+        {$phoneNumber}
+        ■ メールアドレス
+        {$email}
+        ■ 職業
+        {$occupation}
+        ■ 年収
+        {$income}
+        ■お連れ様情報
+
+        ■ お連れ様 名前
+        {$name_1}
+        {$name_2}
+        {$name_3}
+        ■ お連れ様 読み方
+        {$read_1}
+        {$read_2}
+        {$read_3}
+        ■ お連れ様 電話番号
+        {$phoneNumber_1}
+        {$phoneNumber_2}
+        {$phoneNumber_3}
+        ■ お連れ様 メールアドレス
+        {$email_1}
+        {$email_2}
+        {$email_3}
+        ■ お連れ様 職業
+        {$occupation_1}
+        {$occupation_2}
+        {$occupation_3}
+        ■ お連れ様 年収
+        {$income_1}
+        {$income_2}
+        {$income_3}
+    EOD;
+}
+$fromUser = "From:" . $email;
+// endアドミンに送るメール内容
+$headers = array(
+    'MIME-Version: 1.0',
+    'Content-type: text/plain; charset=UTF-8',
+    $fromUser,
+    'Reply-To: ' . $email,
+);
+// // 言語の指定
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+// // end言語の指定
 
 
-// if( mb_send_mail($toAdmin, $mailTitleByAdmin, $mailContentsByAdmin, $headers, $fromUser)) {
-//     $message = "<p>以下の内容で登録させていただきます、ご回答いただきありがとうございました。</p>";
+if (mb_send_mail($toAdmin, $mailTitleByAdmin, $mailContentsByAdmin, $headers, $fromUser)) {
+    $message = "<p>以下の内容で登録させていただきます、ご回答いただきありがとうございました。</p>";
 
-//     if
-//     (mb_send_mail($toAdmin, $mailTitleByAdmin, $mailContentsByAdmin)) {
-//         // 自分に送られたら内容は破棄する
-//         $_SESSION = [];
+    if (mb_send_mail($toAdmin, $mailTitleByAdmin, $mailContentsByAdmin)) {
+        // 自分に送られたら内容は破棄する
+        $_SESSION = [];
 
-//         // cookieのセッション
-//     if(isset($_COOKIE[session_name()])) {
-//         $params = session_get_cookie_params();
-//         setcookie(session_name(),'',time() - 60000, $params["path"], $params["domain"], $params["secure"], $params['httponly']);
-//     }
-//     session_destroy();
-//     }else {
-//         $message = '<p>エラーが発生したため送れませんでした。</p>';
-//     }   
-// }else {
-//     $message = "<p>送信できませんでした。</p>";
-// }
+        // cookieのセッション
+        if (isset($_COOKIE[session_name()])) {
+            $params = session_get_cookie_params();
+            setcookie(session_name(), '', time() - 60000, $params["path"], $params["domain"], $params["secure"], $params['httponly']);
+        }
+        session_destroy();
+    } else {
+        $message = '<p>エラーが発生したため送れませんでした。</p>';
+    }
+} else {
+    $message = "<p>送信できませんでした。</p>";
+}
 // end メールを送る
 
 ?>
