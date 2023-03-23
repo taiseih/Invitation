@@ -4,7 +4,6 @@ if (!$_SESSION['attendance']) {
     header('Location:index.php');
 }
 
-var_dump($_SESSION);
 $attendance = $_SESSION['attendance'];
 $firstName = $_SESSION['first_name'];
 $secondName = $_SESSION['second_name'];
