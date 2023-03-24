@@ -1,6 +1,6 @@
 <?php
 // パスワードを設定する
-$password = "password123";
+$password = "nmtmtk66";
 
 // フォームが送信された場合
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { //post通信かどうかの比較
@@ -32,6 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //post通信かどうかの比較
 
 <body>
     <div id="login">
+        <?php
+        // エラーメッセージがある場合には表示する
+        if (isset($error_message)) {
+            echo "<div style='color:red; font-size:20px'><p>{$error_message}</p></div>";
+        }
+        ?>
         <form name='form-login' method="post">
             <span class="fontawesome-lock"></span>
             <input type="password" name="password" id="pass" placeholder="Password">
@@ -41,11 +47,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //post通信かどうかの比較
         </form>
     </div>
 </body>
-
-
-<?php
-// エラーメッセージがある場合には表示する
-if (isset($error_message)) {
-    echo "<p>{$error_message}</p>";
-}
-?>
