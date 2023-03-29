@@ -1,69 +1,91 @@
 /* 共通スタイルは外に書く */
-  .p-menu{
-    text-align: center;
+.p-menu {
+  text-align: center;
+}
+
+.p-menu__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.p-menu__list {
+  font-family: Libre Baskerville, "Noto Serif JP", 游明朝, YuMincho, ヒラギノ明朝 ProN W3, Hiragino Mincho ProN, HG明朝E, ＭＳ Ｐ明朝, ＭＳ 明朝, serif;
+
+}
+
+.p-menu__list a {
+  display: flex;
+  flex-flow: column;
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 960px) {
+
+  /* pc用スタイル */
+  .p-menu__content {
+    padding: 50px 25%;
   }
-  .p-menu__content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
+
+  .p-menu__list strong {
+    font-size: 30px;
   }
-  .p-menu__list{
-    font-family: Libre Baskerville,"Noto Serif JP",游明朝,YuMincho,ヒラギノ明朝 ProN W3,Hiragino Mincho ProN,HG明朝E,ＭＳ Ｐ明朝,ＭＳ 明朝,serif;
-    
+
+  .p-menu__list em {
+    font-size: 15px;
   }
-  .p-menu__list a{
-    display: flex;
-    flex-flow: column;
-    text-decoration: none;
-    text-align: center;
-    color: #333;
-    cursor: pointer;
+}
+
+@media screen and (min-width: 795px) {
+
+  /* tb用スタイル */
+  .p-menu__content {
+    margin-right: 40px;
   }
-  @media screen and (min-width: 960px) { /* pc用スタイル */
-    .p-menu__content{
-      padding: 50px 25%;
-    }
-    .p-menu__list strong{
-      font-size: 30px;
-    }
-    .p-menu__list em{
-      font-size: 15px;
-      }
+
+  .p-menu__list strong {
+    font-size: 25px;
   }
-  @media screen and (min-width: 795px) { /* tb用スタイル */
-    .p-menu__content{
-      margin-right: 40px;
-    }
-    .p-menu__list strong{
-      font-size: 25px;
-    }
-    .p-menu__list em{
-      font-size: 15px;
-      }
+
+  .p-menu__list em {
+    font-size: 15px;
   }
-  @media screen and (min-width: 531px) { /* sp用スタイル */
-    .p-menu__content{
-      margin-right: 0px;
-      padding: 0px 100px;
-    }
-    .p-menu__list strong{
-      font-size: 20px;
-    }
-    .p-menu__list em{
-      font-size: 10px;
-      }
+}
+
+@media screen and (min-width: 531px) {
+
+  /* sp用スタイル */
+  .p-menu__content {
+    margin-right: 0px;
+    padding: 0px 100px;
   }
-  @media screen and (max-width: 530px) {
-        .p-menu__content {
-            padding-left: 0px;
-          }
-        .p-menu__list strong {
-            font-size: 15px;
-          }
-        
-          .p-menu__list em {
-            font-size: 5px;
-          }
-    
+
+  .p-menu__list strong {
+    font-size: 20px;
   }
+
+  .p-menu__list em {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .p-menu__content {
+    padding-left: 0px;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .p-menu__list strong {
+    font-size: 15px;
+  }
+
+  .p-menu__list em {
+    font-size: 5px;
+  }
+
+}

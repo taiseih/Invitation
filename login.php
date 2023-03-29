@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //post通信かどうかの比較
     if ($user_password === $password) { //あらかじめ決めたパスワードと比較
         session_start();
         $_SESSION['password'] = $password;
-        header("Location: index.php");
+        header("Location: index.html");
         exit();
     } else {
         $error_message = "パスワードが間違っています。";
