@@ -12,6 +12,7 @@
     position: absolute;
     opacity: 0;
     animation: change-img-anim 15s infinite;
+    object-fit: cover;
   }
 
   .head-img:nth-of-type(1) {
@@ -54,6 +55,7 @@
     }
     .head-img {
       height: 800px;
+      object-fit: cover;
     }
     .p-header__title{
       font-size: 100px;
@@ -66,6 +68,7 @@
     }
     .head-img {
       height: 500px;
+      object-fit: cover;
     }
     .p-header__title{
       font-size: 80px;
@@ -77,6 +80,7 @@
     }
     .head-img {
       height: 450px;
+      object-fit: cover;
     }
     .p-header__title{
       font-size: 50px;
