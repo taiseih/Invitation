@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   list-style: none;
+  margin-right: 40px;
 }
 
 .p-menu__list {
@@ -40,7 +41,7 @@
   }
 }
 
-@media screen and (min-width: 795px) {
+@media screen and (max-width: 795px) {
 
   /* tb用スタイル */
   .p-menu__content {
