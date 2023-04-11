@@ -56,23 +56,6 @@
   }
 }
 
-@media screen and (min-width: 531px) {
-
-  /* sp用スタイル */
-  .p-menu__content {
-    margin-right: 0px;
-    padding: 0px 100px;
-  }
-
-  .p-menu__list strong {
-    font-size: 20px;
-  }
-
-  .p-menu__list em {
-    font-size: 10px;
-  }
-}
-
 @media screen and (max-width: 530px) {
   .p-menu__content {
     padding-left: 0px;
