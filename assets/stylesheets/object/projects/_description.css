@@ -66,8 +66,8 @@
 }
 
 @media screen and (max-width: 530px) {
-    .p-description__detail {
-        padding: 20px;
-        font-size: 18px;
-      }
+  .p-description__detail {
+    padding: 20px;
+    font-size: 18px;
+  }
 }
