@@ -116,8 +116,19 @@
   }
 
   @media screen and (max-width: 530px) {
+    .p-countdown__title {
+      font-size: 30px;
+    }
+
+    .p-countdown__date {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+
+
     .p-number {
-      font-size: 40px;
+      font-size: 35px;
     }
 
     .p-dhms {

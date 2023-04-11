@@ -228,7 +228,7 @@
   }
 
   .p-reserve__title {
-      font-size: 40px;
+      font-size: 35px;
       color: #2e6b91;
       letter-spacing: 0.12em;
     }
@@ -243,5 +243,13 @@
     }
   .p-reserve__confirm--btn {
       width: 200px;
+    }
+    .p-reserve__attend{
+      width: 85px;
+      height: 50px;
+    }
+    .p-reserve__decline{
+      width: 85px;
+      height: 50px;
     }
 }

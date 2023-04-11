@@ -70,4 +70,7 @@
     .p-events__title{
       font-size: 30px;
     }
+    #p-events{
+      padding: 20px 0px;
+    }
   }
