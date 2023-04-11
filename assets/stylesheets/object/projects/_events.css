@@ -54,7 +54,6 @@
   @media screen and (max-width: 795px) { /* sp用スタイル */
     .p-events__information--map{
       width: 100%;
-      
     }
     .p-events__information--map iframe {
       display: block;
@@ -62,5 +61,16 @@
     }
     .p-events__title{
       font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    .p-events__information--map iframe {
+      height: 250px;
+    }
+    .p-events__title{
+      font-size: 30px;
+    }
+    #p-events{
+      padding: 20px 0px;
     }
   }

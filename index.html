@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -15,11 +14,6 @@
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="assets/stylesheets/app.css" />
 </head>
-
-<script>
-
-
-</script>
 
 <body>
   <div class="l-body">
@@ -78,7 +72,10 @@
             より徒歩7分<br>①1a出口を出て、青山通り沿いをスターバックスの方向に直進します。<br>②Francfrancを左に曲がり直進します。<br>③2分ほど進むと、右手に「ブラック青山」と書かれた黒い建物の7Fになります。
           </div>
           <div class="p-events__information--map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.691965402021!2d139.71778503998402!3d35.66766779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9dea591961%3A0xf4f34b74f0429c42!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yT5LiB55uu77yS4oiS77yXIOODluODqeODg-OCr-mdkuWxsSA3Zg!5e0!3m2!1sja!2sjp!4v1667228773090!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.691965402021!2d139.71778503998402!3d35.66766779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9dea591961%3A0xf4f34b74f0429c42!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yT5LiB55uu77yS4oiS77yXIOODluODqeODg-OCr-mdkuWxsSA3Zg!5e0!3m2!1sja!2sjp!4v1667228773090!5m2!1sja!2sjp"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <!-- <div class="p-events__information--wrap">
             <p class="p-events__information--link">
@@ -126,7 +123,7 @@
           <br><span class="reserve-text-span">どうぞお気軽にお問い合わせ下さいませ。</span>
         </p>
         <div id="form">
-          <form action="index.php" method="POST" class="p-reserve__form">
+          <form action="mail.php" method="POST" class="p-reserve__form">
             <!-- formエリア -->
 
 
@@ -136,12 +133,14 @@
 
                   <label id="reserve__label01" class="p-reserve__attend" for="attendance activeOn">
                     <span>出席</span>
-                    <input required class="p-reserve__select--btn" type="radio" name="attendance" value="出席" id="attendance activeOn" onclick="actionToggle01();actionIf01()">
+                    <input required class="p-reserve__select--btn" type="radio" name="出欠" value="出席"
+                      id="attendance activeOn" onclick="actionToggle01();actionIf01()">
                   </label>
 
                   <label id="reserve__label02" class="p-reserve__decline" for="attendance activeOff">
                     <span>欠席</span>
-                    <input required class="p-reserve__select--btn" type="radio" name="attendance" value="欠席" id="attendance activeOff" onclick="actionToggle02();actionIf02()">
+                    <input required class="p-reserve__select--btn" type="radio" name="出欠" value="欠席"
+                      id="attendance activeOff" onclick="actionToggle02();actionIf02()">
                   </label>
                 </div>
 
@@ -152,8 +151,9 @@
                         <p class="p-reserve__content--title">名前</p>
                       </div>
                       <div class="p-reserve__content--wrapp">
-                        <input type="text" class="p-reserve__content--inputhalf" name="first_name" placeholder="性" />
-                        <input type="text" class="p-reserve__content--inputhalf" name="second_name" placeholder="名" required="" />
+                        <input type="text" class="p-reserve__content--inputhalf" name="苗字" placeholder="性" />
+                        <input type="text" class="p-reserve__content--inputhalf" name="名前" placeholder="名"
+                          required="" />
                       </div>
                     </div>
                     <div class="p-reserve__content">
@@ -161,33 +161,35 @@
                         <p class="p-reserve__content--title">読み方</p>
                       </div>
                       <div class="p-reserve__content--wrapp">
-                        <input type="text" class="p-reserve__content--inputhalf" name="first_read" placeholder="せい" required="" />
-                        <input type="text" class="p-reserve__content--inputhalf" name="second_read" placeholder="めい" required="" />
+                        <input type="text" class="p-reserve__content--inputhalf" name="苗字（よみ）" placeholder="せい"
+                          required="" />
+                        <input type="text" class="p-reserve__content--inputhalf" name="名前（よみ）" placeholder="めい"
+                          required="" />
                       </div>
                     </div>
                     <div class="p-reserve__content">
                       <div class="p-reserve__content--label">
                         <p class="p-reserve__content--title">電話番号</p>
                       </div>
-                      <input name="phone_number" type="tel" class="p-reserve__content--input" required="" />
+                      <input name="電話番号" type="tel" class="p-reserve__content--input" required="" />
                     </div>
                     <div class="p-reserve__content">
                       <div class="p-reserve__content--label">
                         <p class="p-reserve__content--title">メールアドレス</p>
                       </div>
-                      <input name="email" type="email" class="p-reserve__content--input" />
+                      <input name="メールアドレス" type="email" class="p-reserve__content--input" />
                     </div>
                     <div class="p-reserve__content">
                       <div class="p-reserve__content--label">
                         <p class="p-reserve__content--title">職業</p>
                       </div>
-                      <input name="occupation" type="text" class="p-reserve__content--input" />
+                      <input name="職業" type="text" class="p-reserve__content--input" />
                     </div>
                     <div class="p-reserve__content">
                       <div class="p-reserve__content--label">
                         <p class="p-reserve__content--title">年収</p>
                       </div>
-                      <input name="income" type="number" class="p-reserve__content--input" />
+                      <input name="年収" type="number" class="p-reserve__content--input" />
                     </div>
                   </div>
                 </div>
@@ -204,7 +206,7 @@
             </div>
             <div id="p-reserve__inner"></div>
 
-            <input type="submit" name="submit" class="p-btn p-reserve__confirm--btn"><span></span></input>
+            <input type="submit" class="p-btn p-reserve__confirm--btn"><span></span></input>
           </form>
 
 
@@ -229,8 +231,10 @@
                   <p class="p-reserve__content--title">名前</p>
                 </div>
                 <div class="p-reserve__content--wrapp">
-                  <input name="add_first_name_" type="text" class="p-reserve__content--inputhalf" placeholder="性" required="" />
-                  <input name="add_second_name_" type="text" class="p-reserve__content--inputhalf" placeholder="名" required="" />
+                  <input name="add_first_name_" type="text" class="p-reserve__content--inputhalf" placeholder="性"
+                    required="" />
+                  <input name="add_second_name_" type="text" class="p-reserve__content--inputhalf" placeholder="名"
+                    required="" />
                 </div>
               </div>
               <div class="p-reserve__content">
@@ -238,8 +242,10 @@
                   <p class="p-reserve__content--title">読み方</p>
                 </div>
                 <div class="p-reserve__content--wrapp">
-                  <input name="add_first_read_" type="text" class="p-reserve__content--inputhalf" placeholder="せい" required="" />
-                  <input name="add_second_read_" type="text" class="p-reserve__content--inputhalf" placeholder="めい" required="" />
+                  <input name="add_first_read_" type="text" class="p-reserve__content--inputhalf" placeholder="せい"
+                    required="" />
+                  <input name="add_second_read_" type="text" class="p-reserve__content--inputhalf" placeholder="めい"
+                    required="" />
                 </div>
               </div>
               <div class="p-reserve__content">

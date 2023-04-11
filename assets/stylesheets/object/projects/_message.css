@@ -52,9 +52,12 @@
     font-size: 40px;
   }
 
-  @media screen and (max-width: 795px) {
+}  
+@media screen and (max-width: 795px) {
     #p-message {
       margin: 50px 50px;
     }
+    .p-message__title{
+      font-size: 30px;
+    }
   }
-}
